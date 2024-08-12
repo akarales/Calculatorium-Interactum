@@ -1,0 +1,54 @@
+{
+    "courses": [
+      {
+        "id": "01",
+        "name": "Foundations of Pre-Algebra",
+        "directory": "01-foundations-of-pre-algebra"
+      },
+      {
+        "id": "02",
+        "name": "Algebra Unveiled",
+        "directory": "02-algebra-unveiled"
+      },
+      {
+        "id": "03",
+        "name": "Geometry Explored",
+        "directory": "03-geometry-explored"
+      },
+      {
+        "id": "04",
+        "name": "Advanced Algebra and Precalculus",
+        "directory": "04-advanced-algebra-and-precalculus"
+      },
+      {
+        "id": "05",
+        "name": "Trigonometry in Depth",
+        "directory": "05-trigonometry-in-depth"
+      },
+      {
+        "id": "06",
+        "name": "Calculus I - Limits and Derivatives",
+        "directory": "06-calculus-i-limits-and-derivatives"
+      },
+      {
+        "id": "07",
+        "name": "Calculus II - Integrals and Applications",
+        "directory": "07-calculus-ii-integrals-and-applications"
+      },
+      {
+        "id": "08",
+        "name": "Calculus III - Multivariable Calculus",
+        "directory": "08-calculus-iii-multivariable-calculus"
+      },
+      {
+        "id": "09",
+        "name": "Linear Algebra Fundamentals",
+        "directory": "09-linear-algebra-fundamentals"
+      },
+      {
+        "id": "10",
+        "name": "Probability and Statistics",
+        "directory": "10-probability-and-statistics"
+      }
+    ]
+  }
