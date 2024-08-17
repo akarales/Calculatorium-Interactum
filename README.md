@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to Calculatorium Interactum, an innovative and comprehensive mathematics learning series created by Alexandros Karales. This series is designed to guide learners from the foundations of pre-algebra through to advanced topics in calculus, linear algebra, and statistics. Calculatorium Interactum stands out by combining traditional mathematical rigor with modern computational thinking, offering an interactive and engaging learning experience.
+Welcome to Calculatorium Interactum, an innovative and comprehensive mathematics learning series created by Alexandros Karales. This series guides learners from the foundations of pre-algebra through to advanced topics in calculus, linear algebra, and statistics. Calculatorium Interactum stands out by combining traditional mathematical rigor with modern computational thinking, offering an interactive and engaging learning experience.
 
 ## Series Overview
 
@@ -23,13 +23,14 @@ Calculatorium Interactum consists of ten interconnected courses:
 
 Each course in the series includes:
 
-1. **Textbook**: Comprehensive coverage of topics with examples and illustrations
-2. **Quiz Book**: Regular assessments to check understanding
-3. **Reinforcement Workbook**: Hands-on problem-solving exercises that repeat key concepts for deep understanding and long-term retention
-4. **Midterm Exam**: Comprehensive assessment of the first half of the course
-5. **Final Exam**: Comprehensive assessment covering all course material
-6. **Rule Key**: Summary of key concepts, formulas, and rules
-7. **Teachers Workbook and Answer Book**: Resource for educators with teaching strategies and solutions
+1. **01_lessons**: Comprehensive coverage of topics with examples and illustrations
+2. **02_quiz_book**: Regular assessments to check understanding
+3. **03_reinforcement_workbook**: Hands-on problem-solving exercises for deep understanding and long-term retention
+4. **04_interactive_visualizations**: Dynamic, interactive plots and diagrams to aid comprehension
+5. **05_midterm_exam**: Comprehensive assessment of the first half of the course
+6. **06_final_exam**: Comprehensive assessment covering all course material
+7. **07_use_cases**: Real-world applications and projects demonstrating practical relevance
+8. **rule_key.txt**: Summary of key concepts, formulas, and rules
 
 ## Key Features
 
@@ -37,20 +38,24 @@ Each course in the series includes:
 - **Comprehensive Coverage**: From basic arithmetic to advanced statistical concepts.
 - **Multi-Language Approach**: Utilization of Python, Haskell, R, Julia, C, C++, Rust, JavaScript, and other languages promotes diverse computational thinking and real-world applicability.
 - **Rigorous Yet Engaging**: Maintains mathematical rigor while keeping content approachable and interesting.
-- **Reinforcement Learning**: Key concepts are reinforced through repeated hands-on problem-solving exercises, ensuring mastery and long-term retention.
+- **Adaptive Learning Algorithms**: Embedded in lesson notebooks to adjust difficulty based on student performance.
+- **Interactive Visualizations**: Dynamic plots and diagrams allow students to explore concepts visually and interactively.
+- **Reinforcement Learning**: Key concepts are reinforced through repeated hands-on problem-solving exercises.
+- **Real-World Use Cases**: Each course includes practical projects demonstrating real-world applications.
 - **Educator Support**: Dedicated teachers workbook provides guidance and answers for effective instruction.
-- **Practical Programming Examples**: Each chapter concludes with implementations of the covered mathematical concepts in various programming languages, offering insights into different computational approaches, performance characteristics, and application domains.
 
 ## Learning Methodology
 
-Calculatorium Interactum employs a unique reinforcement learning strategy:
+Calculatorium Interactum employs a unique learning strategy:
 
-1. **Concept Introduction**: Each new concept is thoroughly explained in the textbook.
-2. **Initial Practice**: Students attempt related problems in the Quiz Book.
-3. **Deep Reinforcement**: The Reinforcement Workbook provides repeated hands-on problem-solving exercises for each concept, ensuring thorough understanding.
-4. **Comprehensive Review**: Midterm and Final Exams assess overall understanding.
-5. **Quick Reference**: The Rule Key serves as a concise summary for review and reference.
-6. **Practical Application**: Programming examples at the end of each chapter demonstrate real-world applications of the mathematical concepts using various languages.
+1. **Concept Introduction**: Each new concept is thoroughly explained in the lessons.
+2. **Interactive Exploration**: Students engage with interactive visualizations to build intuition.
+3. **Initial Practice**: Students attempt related problems in the Quiz Book.
+4. **Adaptive Learning**: Lesson notebooks adjust difficulty based on student performance.
+5. **Deep Reinforcement**: The Reinforcement Workbook provides repeated hands-on problem-solving exercises.
+6. **Practical Application**: Use cases demonstrate real-world applications of the concepts.
+7. **Comprehensive Review**: Midterm and Final Exams assess overall understanding.
+8. **Quick Reference**: The Rule Key serves as a concise summary for review and reference.
 
 ## Repository Structure
 
@@ -58,30 +63,33 @@ Calculatorium Interactum employs a unique reinforcement learning strategy:
 calculatorium-interactum/
 │
 ├── 01-foundations-of-pre-algebra/
-│   ├── textbook/
-│   │   ├── chapters/
-│   │   │   └── [Each chapter includes examples in multiple programming languages]
-│   │   ├── main.tex
-│   │   └── references.bib
-│   ├── quiz-book/
-│   ├── reinforcement-workbook/
-│   ├── midterm-exam/
-│   ├── final-exam/
-│   ├── rule-key/
-│   └── teachers-workbook-and-answer-book/
+│   ├── 01_lessons/
+│   │   ├── lesson_template.ipynb
+│   │   ├── 01_introduction_to_pre_algebra.ipynb
+│   │   └── ...
+│   ├── 02_quiz_book/
+│   ├── 03_reinforcement_workbook/
+│   ├── 04_interactive_visualizations/
+│   │   └── dynamic_plots.py
+│   ├── 05_midterm_exam/
+│   ├── 06_final_exam/
+│   ├── 07_use_cases/
+│   │   └── use_case_template.ipynb
+│   └── rule_key.txt
 │
 ├── [02-10: Similar structure for other courses]
 │
 ├── shared-resources/
 │   ├── latex-templates/
-│   ├── python-scripts/
-│   ├── haskell-scripts/
-│   ├── r-scripts/
-│   ├── julia-scripts/
-│   ├── c-scripts/
-│   ├── cpp-scripts/
-│   ├── rust-scripts/
-│   ├── javascript-scripts/
+│   ├── language-examples/
+│   │   ├── python/
+│   │   ├── haskell/
+│   │   ├── r/
+│   │   ├── julia/
+│   │   ├── c/
+│   │   ├── cpp/
+│   │   ├── rust/
+│   │   └── javascript/
 │   └── jupyter-notebooks/
 │
 ├── README.md
@@ -89,61 +97,57 @@ calculatorium-interactum/
 └── LICENSE
 ```
 
+## Language Library
+
+The `shared-resources/language-examples/` directory contains implementations of key mathematical concepts in various programming languages. This allows students to compare and contrast different approaches and choose the language that best suits their needs or interests. Each language subdirectory contains examples organized by mathematical topic.
+
 ## Getting Started
 
 1. Clone this repository:
    ```
    git clone https://github.com/your-username/Calculatorium-Interactum.git
    ```
-2. Install required software: Python, Haskell, R, Julia, C, C++, Rust compilers, Node.js (for JavaScript), Jupyter, and other necessary tools.
-3. Navigate to the course and component you wish to study.
-4. Open the Jupyter Notebooks to interact with the computational examples.
+2. Install required software: Python, Jupyter, and other necessary tools (Haskell, R, Julia, C, C++, Rust compilers, Node.js as needed).
+3. Navigate to the desired course and start with the lessons in the `01_lessons` directory.
+4. Use Jupyter Notebook to open and interact with the lesson files.
 
 ## For Learners
 
-- Start with the textbook for each course to grasp the fundamental concepts.
+- Begin with the lessons for each course to grasp the fundamental concepts.
+- Engage with interactive visualizations to build intuition.
 - Use the Quiz Book to test your initial understanding.
-- Dive deep into the Reinforcement Workbook for hands-on practice and to solidify your knowledge.
+- Work through the Reinforcement Workbook for hands-on practice.
+- Explore use cases to see real-world applications of the concepts.
 - Prepare for assessments using the Midterm and Final Exams.
 - Refer to the Rule Key for quick revision of key concepts.
-- Explore the programming examples at the end of each chapter to see practical applications of the concepts in various languages.
 
 ## For Educators
 
-The Teachers Workbook and Answer Book in each course provides:
+The Teachers Workbook and Answer Book (provided separately) includes:
 - Detailed solutions to all exercises, quizzes, and exams
 - Pedagogical tips and strategies
 - Common student misconceptions and how to address them
 - Suggested lesson plans and pacing guides
-- Guidance on implementing the reinforcement learning method effectively
-- Additional context and explanations for the programming examples in different languages
+- Guidance on implementing the adaptive learning methods
+- Additional context for programming examples in different languages
 
-## Programming Languages and Tools
+## Development Workflow
 
-- **Python**: Used for general-purpose programming and data analysis examples
-- **Haskell**: Used for functional programming examples and abstract mathematics
-- **R**: Employed for statistical computing and graphical examples
-- **Julia**: Utilized for high-performance numerical and scientific computing examples
-- **C**: Used for low-level programming examples and performance-critical algorithms
-- **C++**: Employed for object-oriented programming and complex systems modeling
-- **Rust**: Utilized for systems programming examples with a focus on memory safety and concurrency
-- **JavaScript**: Used for web-based visualizations, interactive demonstrations, and client-side computations
-- **Jupyter Notebooks**: For interactive coding and visualization across multiple languages
+To contribute to or develop content for Calculatorium Interactum:
 
-## Language-Specific Benefits
+1. Fork the repository and clone your fork.
+2. Create a new branch for your changes.
+3. Use the provided templates (lesson_template.ipynb, use_case_template.ipynb) when creating new content.
+4. Ensure any new interactive visualizations are placed in the appropriate `04_interactive_visualizations` directory.
+5. Add language-specific examples to the shared language library as appropriate.
+6. Test all Jupyter notebooks and scripts before submitting changes.
+7. Submit a pull request with a clear description of your changes.
 
-- **Python**: Readability and vast library ecosystem
-- **Haskell**: Strong type system and pure functional programming
-- **R**: Statistical analysis and data visualization
-- **Julia**: High-performance scientific computing
-- **C**: Low-level memory management and system interactions
-- **C++**: Object-oriented design and template metaprogramming
-- **Rust**: Memory safety without garbage collection and fearless concurrency
-- **JavaScript**: Web-based interactivity and widespread browser support
+For more detailed guidelines, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## Contributing
 
-We welcome contributions to enhance Calculatorium Interactum. Please refer to our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute.
+We welcome contributions to enhance Calculatorium Interactum. Please refer to our [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed guidelines on how to contribute.
 
 ## License
 
@@ -154,3 +158,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For inquiries about Calculatorium Interactum, please contact Alexandros Karales at [your email or contact information].
 
 Embark on your journey through the world of interactive mathematics with Calculatorium Interactum!
+
