@@ -40,7 +40,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -60,64 +60,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<h3>What is 42 + 22?</h3>"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "1c94c0b2f4394f7584b14ec5d61bedac",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "IntText(value=71, description='Your answer:')"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "8c2b84b03e9a4a3bbce45df8e4a031ee",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Button(description='Check', style=ButtonStyle())"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "c90c6e13294d44e9925161219fe54eee",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "HTML(value=\"<span style='color: green;'>Correct! 42 + 29 = 71.</span>\")"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
+   "outputs": [],
    "source": [
     "def check_addition(b):\n",
     "    global num1, num2\n",
@@ -153,64 +98,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<h3>What is 67 - 34?</h3>"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "63b75a164c9b43c69152d0197390de2e",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "IntText(value=-14, description='Your answer:')"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "d2937abf2f164c1888483f1434bb6043",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Button(description='Check', style=ButtonStyle())"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "c4d98363359f40dab32100639bfc8985",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "HTML(value=\"<span style='color: green;'>Correct! 34 - 48 = -14.</span>\")"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
+   "outputs": [],
    "source": [
     "def check_subtraction(b):\n",
     "    global num1, num2\n",
@@ -246,64 +136,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<h3>What is 5 × 6?</h3>"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "a12ad86a043a490ca70de181ec43426e",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "IntText(value=12, description='Your answer:')"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "e0a5c12527ab48cc92b61144ab32c0aa",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Button(description='Check', style=ButtonStyle())"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "f37d619879e140b58138181d970c89a6",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "HTML(value=\"<span style='color: green;'>Correct! 3 × 4 = 12.</span>\")"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
+   "outputs": [],
    "source": [
     "def check_multiplication(b):\n",
     "    global num1, num2\n",
@@ -341,62 +176,7 @@
    "cell_type": "code",
    "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<h3>What is 120 ÷ 10?</h3>"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "24ddc136c66c4348a32be605043ee985",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "IntText(value=9, description='Your answer:')"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "0839ad4637114066be0df6544b4fb9c7",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Button(description='Check', style=ButtonStyle())"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "d0e860264433416ebdbefe1792ea81e0",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "HTML(value=\"<span style='color: green;'>Correct! 54 ÷ 6 = 9.</span>\")"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
+   "outputs": [],
    "source": [
     "def check_division(b):\n",
     "    global num1, num2\n",
@@ -453,7 +233,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.11.7"
+   "version": "3.8.5"
   }
  },
  "nbformat": 4,

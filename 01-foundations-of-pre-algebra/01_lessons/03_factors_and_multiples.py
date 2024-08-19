@@ -26,7 +26,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -46,76 +46,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<h3>What are the factors of 39?</h3>"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "text/html": [
-       "Enter the factors separated by commas (e.g., 1, 2, 3)"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "4584a66a253b4adf95369ebb24b58efa",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Text(value='1,29', description='Factors:')"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "a1768d06ad7c489ab101fc18d8da457d",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Button(description='Check', style=ButtonStyle())"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "200ce7bcfa994eb2b2173d6fdeb55024",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "HTML(value=\"<span style='color: green;'>Correct! The factors of 29 are 1, 29.</span>\")"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
+   "outputs": [],
    "source": [
     "def check_factors(b):\n",
     "    global number\n",
@@ -153,76 +86,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<h3>What are the first five multiples of 7?</h3>"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "text/html": [
-       "Enter the multiples separated by commas (e.g., 2, 4, 6, 8, 10)"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "3a2153bed3984431a651d8d6c8fec243",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Text(value='5,10,15,20,25', description='Multiples:')"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "9e329937821a4305bd5947054ce92350",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Button(description='Check', style=ButtonStyle())"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "d16d727d8d8c4d628e19eade62612345",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "HTML(value=\"<span style='color: green;'>Correct! The first five multiples of 5 are 5, 10, 15, 20, 25.</span>\")"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
+   "outputs": [],
    "source": [
     "def check_multiples(b):\n",
     "    global number\n",
@@ -265,64 +131,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<h3>Is 16 a prime or composite number?</h3>"
-      ],
-      "text/plain": [
-       "<IPython.core.display.HTML object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "f12d5c8910514d15aa0677449574a199",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Text(value='prime', description='Answer:')"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "8b4682b509b04835a78b3b9ae005ed11",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Button(description='Check', style=ButtonStyle())"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "6a9312b5869f4dcf8177e7f02b200c67",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "HTML(value=\"<span style='color: green;'>Correct! 11 is a prime number.</span>\")"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
+   "outputs": [],
    "source": [
     "def is_prime(n):\n",
     "    if n < 2:\n",
@@ -385,7 +196,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.11.7"
+   "version": "3.8.5"
   }
  },
  "nbformat": 4,

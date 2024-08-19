@@ -11,21 +11,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "ename": "ImportError",
-     "evalue": "cannot import name 'reset_progress' from 'import_db_utils' (/home/anubix/Documents/CODE/Calculatorium-Interactum/01-foundations-of-pre-algebra/01_lessons/import_db_utils.py)",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
-      "Cell \u001b[0;32mIn[10], line 3\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;28;01mimport\u001b[39;00m \u001b[38;5;21;01mipywidgets\u001b[39;00m \u001b[38;5;28;01mas\u001b[39;00m \u001b[38;5;21;01mwidgets\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01mIPython\u001b[39;00m\u001b[38;5;21;01m.\u001b[39;00m\u001b[38;5;21;01mdisplay\u001b[39;00m \u001b[38;5;28;01mimport\u001b[39;00m display, HTML, clear_output\n\u001b[0;32m----> 3\u001b[0m \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01mimport_db_utils\u001b[39;00m \u001b[38;5;28;01mimport\u001b[39;00m update_progress, reset_progress, get_progress\n\u001b[1;32m      5\u001b[0m \u001b[38;5;66;03m# Assume user_id 1 for now. In a real app, you'd get this from authentication.\u001b[39;00m\n\u001b[1;32m      6\u001b[0m user_id \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m1\u001b[39m\n",
-      "\u001b[0;31mImportError\u001b[0m: cannot import name 'reset_progress' from 'import_db_utils' (/home/anubix/Documents/CODE/Calculatorium-Interactum/01-foundations-of-pre-algebra/01_lessons/import_db_utils.py)"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "import ipywidgets as widgets\n",
     "from IPython.display import display, HTML, clear_output\n",
