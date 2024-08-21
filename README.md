@@ -158,6 +158,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For inquiries about Calculatorium Interactum, please contact Alexandros Karales at [your email or contact information].
+For inquiries about Calculatorium Interactum, please contact Alexandros Karales at karales.com.
 
 Embark on your journey through the world of interactive mathematics with Calculatorium Interactum!
