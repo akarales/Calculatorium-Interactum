@@ -10,6 +10,49 @@
    ]
   },
   {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import ipywidgets as widgets\n",
+    "from IPython.display import display, HTML, clear_output\n",
+    "from import_db_utils import update_progress, reset_progress, get_progress\n",
+    "import random\n",
+    "\n",
+    "# Assume user_id 1 for now. In a real app, you'd get this from authentication.\n",
+    "user_id = 1\n",
+    "course_name = \"Foundations of Pre-Algebra\"\n",
+    "lesson_name = \"Whole Numbers and Operations\"\n",
+    "\n",
+    "# Initialize score\n",
+    "score = 0\n",
+    "total_questions = 4\n",
+    "\n",
+    "def get_existing_progress():\n",
+    "    progress_df = get_progress(user_id)\n",
+    "    if not progress_df.empty:\n",
+    "        lesson_progress = progress_df[(progress_df['course'] == course_name) & (progress_df['lesson'] == lesson_name)]\n",
+    "        if not lesson_progress.empty:\n",
+    "            return lesson_progress.iloc[0]['score'], lesson_progress.iloc[0]['completed']\n",
+    "    return None, None\n",
+    "\n",
+    "existing_score, existing_completed = get_existing_progress()\n",
+    "if existing_score is not None:\n",
+    "    print(f\"You have already completed this lesson with a score of {existing_score}%.\")\n",
+    "    retake = input(\"Would you like to retake the lesson? (yes/no): \").lower().strip()\n",
+    "    if retake != 'yes':\n",
+    "        print(\"Exiting the lesson. You can run this notebook again if you change your mind.\")\n",
+    "        import sys\n",
+    "        sys.exit()\n",
+    "    else:\n",
+    "        reset_progress(user_id, courses=[course_name], lessons=[lesson_name])\n",
+    "        print(\"Progress reset. Starting the lesson from the beginning.\")\n",
+    "\n",
+    "print(\"Let's begin the lesson!\")"
+   ]
+  },
+  {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -39,17 +82,6 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import ipywidgets as widgets\n",
-    "from IPython.display import display, HTML, clear_output\n",
-    "import random"
-   ]
-  },
-  {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -65,11 +97,12 @@
    "outputs": [],
    "source": [
     "def check_addition(b):\n",
-    "    global num1, num2\n",
+    "    global score, num1, num2\n",
     "    user_answer = addition_input.value\n",
     "    correct_answer = num1 + num2\n",
     "    if user_answer == correct_answer:\n",
     "        addition_output.value = f\"<span style='color: green;'>Correct! {num1} + {num2} = {correct_answer}.</span>\"\n",
+    "        score += 1\n",
     "    else:\n",
     "        addition_output.value = f\"<span style='color: red;'>Not quite. {num1} + {num2} = {correct_answer}. Let's try again!</span>\"\n",
     "    num1, num2 = random.randint(1, 50), random.randint(1, 50)\n",
@@ -103,11 +136,12 @@
    "outputs": [],
    "source": [
     "def check_subtraction(b):\n",
-    "    global num1, num2\n",
+    "    global score, num1, num2\n",
     "    user_answer = subtraction_input.value\n",
     "    correct_answer = num1 - num2\n",
     "    if user_answer == correct_answer:\n",
     "        subtraction_output.value = f\"<span style='color: green;'>Correct! {num1} - {num2} = {correct_answer}.</span>\"\n",
+    "        score += 1\n",
     "    else:\n",
     "        subtraction_output.value = f\"<span style='color: red;'>Not quite. {num1} - {num2} = {correct_answer}. Let's try again!</span>\"\n",
     "    num1, num2 = random.randint(10, 100), random.randint(1, 50)\n",
@@ -141,11 +175,12 @@
    "outputs": [],
    "source": [
     "def check_multiplication(b):\n",
-    "    global num1, num2\n",
+    "    global score, num1, num2\n",
     "    user_answer = multiplication_input.value\n",
     "    correct_answer = num1 * num2\n",
     "    if user_answer == correct_answer:\n",
     "        multiplication_output.value = f\"<span style='color: green;'>Correct! {num1} × {num2} = {correct_answer}.</span>\"\n",
+    "        score += 1\n",
     "    else:\n",
     "        multiplication_output.value = f\"<span style='color: red;'>Not quite. {num1} × {num2} = {correct_answer}. Let's try again!</span>\"\n",
     "    num1, num2 = random.randint(2, 12), random.randint(2, 12)\n",
@@ -179,11 +214,12 @@
    "outputs": [],
    "source": [
     "def check_division(b):\n",
-    "    global num1, num2\n",
+    "    global score, num1, num2\n",
     "    user_answer = division_input.value\n",
     "    correct_answer = num1 // num2\n",
     "    if user_answer == correct_answer:\n",
     "        division_output.value = f\"<span style='color: green;'>Correct! {num1} ÷ {num2} = {correct_answer}.</span>\"\n",
+    "        score += 1\n",
     "    else:\n",
     "        division_output.value = f\"<span style='color: red;'>Not quite. {num1} ÷ {num2} = {correct_answer}. Let's try again!</span>\"\n",
     "    num2 = random.randint(2, 12)\n",
@@ -213,7 +249,69 @@
     "\n",
     "Remember, practice makes perfect! Feel free to run these interactive exercises multiple times to reinforce your understanding.\n",
     "\n",
-    "In our next lesson, we'll delve into factors and multiples, building upon the concepts we've learned here. See you then!"
+    "Let's review your progress:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Calculate final score\n",
+    "final_score = (score / total_questions) * 100\n",
+    "\n",
+    "print(f\"Lesson completed! Your score: {final_score}%\")\n",
+    "\n",
+    "def save_progress(b):\n",
+    "    try:\n",
+    "        update_progress(user_id, course_name, lesson_name, final_score, 1)\n",
+    "        save_output.value = \"<span style='color: green;'>Your progress has been saved.</span>\"\n",
+    "    except Exception as e:\n",
+    "        save_output.value = f\"<span style='color: red;'>An error occurred while saving progress: {str(e)}</span>\"\n",
+    "    \n",
+    "    clear_output(wait=True)\n",
+    "    display(HTML(f\"<h3>Your score: {final_score}%</h3>\"))\n",
+    "    display(save_button, save_output)\n",
+    "    display(HTML(\"<p>Would you like to retake the lesson to improve your score?</p>\"))\n",
+    "    display(retake_button)\n",
+    "\n",
+    "def retake_lesson(b):\n",
+    "    global score\n",
+    "    score = 0\n",
+    "    print(\"To retake the lesson, please run all cells in this notebook again.\")\n",
+    "\n",
+    "save_button = widgets.Button(description=\"Save Progress\")\n",
+    "save_button.on_click(save_progress)\n",
+    "save_output = widgets.HTML()\n",
+    "\n",
+    "retake_button = widgets.Button(description=\"Retake Lesson\")\n",
+    "retake_button.on_click(retake_lesson)\n",
+    "\n",
+    "display(HTML(f\"<h3>Your score: {final_score}%</h3>\"))\n",
+    "display(save_button, save_output)\n",
+    "display(HTML(\"<p>Would you like to retake the lesson to improve your score?</p>\"))\n",
+    "display(retake_button)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Next Steps\n",
+    "\n",
+    "Congratulations on completing the Whole Numbers and Operations lesson! Here's what you can do next:\n",
+    "\n",
+    "1. If you're satisfied with your score, click 'Save Progress' to record it.\n",
+    "2. If you'd like to improve your score, click 'Retake Lesson' and go through the exercises again.\n",
+    "3. Review any concepts you found challenging.\n",
+    "4. Practice these operations in your daily life to reinforce your learning.\n",
+    "\n",
+    "Remember, mathematics is a journey, and each step builds on the last. Keep practicing, stay curious, and don't hesitate to revisit these concepts as you move forward in your pre-algebra studies.\n",
+    "\n",
+    "In the next lesson, we'll explore more advanced topics building on these fundamental operations. Get ready to dive deeper into the fascinating world of mathematics!\n",
+    "\n",
+    "Happy learning!"
    ]
   }
  ],
@@ -233,7 +331,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.8.5"
+   "version": "3.8.8"
   }
  },
  "nbformat": 4,
